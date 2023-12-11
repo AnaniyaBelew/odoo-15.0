@@ -1,1 +1,1 @@
-from .import Arifpay
+from . import payment

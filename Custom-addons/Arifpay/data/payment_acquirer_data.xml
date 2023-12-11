@@ -1,0 +1,9 @@
+<odoo>
+    <record id="payment_acquirer_arifpay" model="payment.acquirer">
+        <field name="name">Arifpay</field>
+        <field name="provider">arifpay</field>
+        <field name="inline_form_view_id" ref="payment_form_arifpay_template"/>
+        <field name="state">enabled</field>
+        <field name="company_id" ref="base.main_company"/>
+    </record>
+</odoo>

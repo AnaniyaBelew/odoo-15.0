@@ -1,0 +1,26 @@
+<!-- /my_module/views/payment_arifpay_templates.xml -->
+<odoo>
+
+    <template id="payment_form_arifpay_template">
+        <form action="https://gateway.arifpay.org/api/sandbox/checkout/session" method="post">
+            <input type="hidden" name="email" t-att-value="email"/>
+            <input type="hidden" name="phone" t-att-value="phone"/>
+            <input type="hidden" name="cancelurl" t-att-value="cancelurl"/>
+            <input type="hidden" name="errorurl" t-att-value="errorurl"/>
+            <input type="hidden" name="successurl" t-att-value="successurl"/>
+            <input type="hidden" name="nonce" t-att-value="nonce"/>
+            <input type="hidden" name="items" t-att-value="item"/>
+            <input type="hidden" name="beneficiaries" t-att-value="beneficiary"/>
+           
+            <input type="submit" value="Pay with Arifpay"/>
+        </form>
+    </template>
+    
+    <template id="payment_arifpay_feedback">
+        <div>
+            <p>Thank you for your payment!</p>
+            <!-- TODO: Add your feedback page here -->
+        </div>
+    </template>
+  
+</odoo>
