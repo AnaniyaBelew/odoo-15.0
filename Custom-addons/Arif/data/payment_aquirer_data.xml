@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <record id="payment_acquirer_arifpay" model="payment.acquirer">
+        <field name="name">Arifpay</field>
+        <field name="provider">arifpay</field>
+        <field name="redirect_form_view_id" ref="redirect_form"/>
+    </record>
+
+    <record id="payment_method_arifpay" model="account.payment.method">
+        <field name="name">arifpay</field>
+        <field name="code">arifpay</field>
+        <field name="payment_type">inbound</field>
+    </record>
+
+</odoo>

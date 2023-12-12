@@ -1,15 +1,15 @@
 {
-    'name': 'Arifpay Payment Acquirer',
+    'name': 'Arifpay Payment updated',
     'version': '1.0',
     'category': 'Payment Acquirer',
     'summary': 'Payment Acquirer: Arifpay Implementation',
     'description': """Arifpay Payment Acquirer""",
     'depends': ['payment'],
-    'sequence':"1",
+    'sequence': -50,
     'data': [
-        'views/payment_arifpay_templates.xml',
-        'views/payment_form_arifpay.xml',
-        'data/payment_acquirer_data.xml',
+        'views/payment_mollie_templates.xml',
+        'views/payment_views.xml',
+        'data/payment_aquirer_data.xml',
     ],
-    'installable': True,
+    'aplication': True,
 }

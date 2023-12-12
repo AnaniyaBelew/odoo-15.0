@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="payment_acquirer_form" model="ir.ui.view">
+        <field name="name">Arifpay Acquirer Form</field>
+        <field name="model">payment.acquirer</field>
+        <field name="inherit_id" ref="payment.payment_acquirer_form"/>
+        <field name="arch" type="xml">
+            <xpath expr='//group[@name="acquirer"]' position='inside'>
+                <group attrs="{'invisible': [('provider', '!=', 'arifpay')]}">
+                    <field name="arifpay_api_key" string="API Key" attrs="{'required': [('provider', '=', 'arifpay'), ('state', '!=', 'disabled')]}" password="True"/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+     <record id="transaction_form_arifpay" model="ir.ui.view">
+        <field name="name">acquirer.transaction.form.arifpay</field>
+        <field name="model">payment.transaction</field>
+        <field name="inherit_id" ref="payment.payment_transaction_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='acquirer_reference']" position="after">
+                <field name="reference" readonly="1" attrs="{'invisible': [('provider', '!=', 'arifpay')]}"/>
+            </xpath>
+        </field>
+</record> 
+
+</odoo>
